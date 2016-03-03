@@ -1,0 +1,15 @@
+{
+    "name": "amonger/currency-converter",
+    "licence": "mit",
+    "authors": [
+        {
+            "name": "Alan Monger",
+            "email": "haveacigaro@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Currency\\": "src/"
+        }
+    }
+}
