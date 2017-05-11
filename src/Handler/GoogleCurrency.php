@@ -2,18 +2,11 @@
 
 namespace Currency\Handler;
 
-class GoogleCurrency implements CurrencyInterface
+class GoogleCurrency extends AbstractHandler
 {
     const URL = 'https://www.google.com/finance/converter?a=%d&from=%s&to=%s';
 
-    private $rates = [];
-
-    public function execute($value, $from, $to)
-    {
-        return $this->getRate($from, $to) * $value;
-    }
-
-    private function getRate($from, $to)
+    protected function getRate($from, $to)
     {
         if (!isset($this->rates[$from])) {
             $this->rates[$from] = [];
