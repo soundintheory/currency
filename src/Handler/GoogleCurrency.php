@@ -4,7 +4,7 @@ namespace Currency\Handler;
 
 class GoogleCurrency extends AbstractHandler
 {
-    const URL = 'https://www.google.com/finance/converter?a=%d&from=%s&to=%s';
+    const URL = 'https://finance.google.com/finance/converter?a=%d&from=%s&to=%s';
 
     protected function getRate($from, $to)
     {
